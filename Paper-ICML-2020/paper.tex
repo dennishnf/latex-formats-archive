@@ -1,0 +1,208 @@
+%%%%%%%% ICML 2020 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2020} with \usepackage[nohyperref]{icml2020} above.
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+%\usepackage{icml2020}
+
+% If accepted, instead use the following line for the camera-ready submission:
+\usepackage[accepted]{icml2020}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{Template for ICML 2020 conference}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Template for ICML 2020 conference}
+
+% It is OKAY to include author information, even for blind
+% submissions: the style file will automatically remove it for you
+% unless you've provided the [accepted] option to the icml2020
+% package.
+
+% List of affiliations: The first argument should be a (short)
+% identifier you will use later to specify author affiliations
+% Academic affiliations should list Department, University, City, Region, Country
+% Industry affiliations should list Company, City, Region, Country
+
+% You can specify symbols, otherwise they are numbered in order.
+% Ideally, you should not use this facility. Affiliations will be numbered
+% in order of appearance and this is the preferred way.
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Dennis Núñez-Fernández}{one}
+\icmlauthor{Author 2}{two}
+\icmlauthor{Author 3}{one}
+\end{icmlauthorlist}
+
+\icmlaffiliation{one}{Laboratorio de Bioinformática y Biología Molecular, Universidad Peruana Cayetano Heredia, Peru}
+\icmlaffiliation{two}{Visual Intelligence and Machine Perception Group
+University of Padova, Italy}
+
+
+\icmlcorrespondingauthor{Mirko Zimic}{mirko.zimic@upch.pe}
+
+% You may provide any keywords that you
+% find helpful for describing your paper; these are used to populate
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Machine Learning, ICML}
+
+\vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column
+% listing the affiliations and the copyright notice.
+% The command takes one argument, which is text to display at the start of the footnote.
+% The \icmlEqualContribution command is standard text for equal contribution.
+% Remove it (just {}) if you do not need this facility.
+
+\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+%\printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. Imperdiet sed euismod nisi porta. Varius sit amet mattis vulputate enim.
+\end{abstract}
+
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. Imperdiet sed euismod nisi porta. Varius sit amet mattis vulputate enim \cite{1_}, \cite{2_}, \cite{3_}, \cite{4_}, \cite{5_}.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio.
+
+
+
+\section{Methodology}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas.
+
+
+\begin{figure}[H]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.8\columnwidth]{images/image-example.jpg}}
+\caption{Lorem ipsum dolor sit amet.}
+\label{overview}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.9\columnwidth]{images/image-example.jpg}}
+\caption{Lorem ipsum dolor sit amet.}
+\label{sample}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. See Figure~\ref{sample}.
+
+
+
+
+
+
+
+\section{Results and Discussion}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio.
+
+
+\begin{table}[H]
+\caption{Lorem ipsum dolor sit amet.}
+\label{cnns-table}
+\vskip 0.15in
+\begin{center}
+\begin{small}
+\begin{sc}
+\begin{tabular}{lcccr}
+\toprule
+\textbf{Approach} & \textbf{Accuracy} \\
+\midrule
+LeNet & 67.2$\pm$ 0.6 \\
+AlexNet & 73.4$\pm$ 0.8 \\
+VGG-19 & 79.7$\pm$ 1.4 \\
+\textbf{CapsNet} & \textbf{84.3$\pm$ 1.2} \\
+\bottomrule
+\end{tabular}
+\end{sc}
+\end{small}
+\end{center}
+\vskip -0.1in
+\end{table}
+
+
+
+\section{Conclusions}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio.
+
+
+
+
+% Acknowledgements should only appear in the accepted version.
+\section*{Acknowledgements}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque.
+
+
+
+% \pagebreak
+% \clearpage
+
+
+
+
+\bibliography{references}
+\bibliographystyle{icml2020}
+
+
+
+
+\end{document}
+
+
+% This document was modified from the file originally made available by
+% Pat Langley and Andrea Danyluk for ICML-2K. This version was created
+% by Iain Murray in 2018, and modified by Alexandre Bouchard in
+% 2019 and 2020. Previous contributors include Dan Roy, Lise Getoor and Tobias
+% Scheffer, which was slightly modified from the 2010 version by
+% Thorsten Joachims & Johannes Fuernkranz, slightly modified from the
+% 2009 version by Kiri Wagstaff and Sam Roweis's 2008 version, which is
+% slightly modified from Prasad Tadepalli's 2007 version which is a
+% lightly changed version of the previous year's version by Andrew
+% Moore, which was in turn edited from those of Kristian Kersting and
+% Codrina Lauth. Alex Smola contributed to the algorithmic style files.

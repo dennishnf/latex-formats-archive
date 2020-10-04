@@ -1,0 +1,258 @@
+\documentclass{beamer}
+\usepackage{etex}  %%para que funcione con Linux Ubuntu 14.04
+\usepackage{beamerthemeCVC}
+\usepackage{graphicx}
+
+%% paquetes agregados por mi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption} %%paquete para hacer etiquetas caption mas pequeñas
+\usepackage{subfigure} % subfiguras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{pgf-pie}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{multirow}  %% multi linea de tabla
+
+
+%% PRESENTATION CONFIGURATION PARAMETERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlebackgroundfile{templates/template_title_blue}
+\framebackgroundfile{templates/template_frame_blue}
+\definecolor{vermell}{HTML}{254E68}
+\definecolor{gris}{HTML}{4C4C4C}
+\usefonttheme{structurebold}
+\setbeamercolor{author in head/foot}{fg=white}
+\setbeamercolor{title in head/foot}{fg=white}
+\setbeamercolor{section in head/foot}{fg=vermell}
+\setbeamercolor{normal text}{fg=gris}
+\setbeamercolor{frametitle}{fg=vermell}
+\setbeamerfont{block title}{size={}}
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamercolor{section in toc shaded}{fg=vermell} %
+\setbeamercolor{section in toc}{fg=vermell} %
+\setbeamercolor{caption name}{fg=gris} %??
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
+\setbeamertemplate{itemize subsubsubitem}[circle]
+\setbeamercolor{description item}{fg=vermell}
+\setbeamercolor{description subitem}{fg=vermell}
+\setbeamercolor{description subsubitem}{fg=vermell}
+\setbeamercolor{description subsubsubitem}{fg=vermell}
+\setbeamercolor{itemize item}{fg=vermell}
+\setbeamercolor{itemize subitem}{fg=vermell}
+\setbeamercolor{itemize subsubitem}{fg=vermell}
+\setbeamercolor{itemize subsubsubitem}{fg=vermell}
+\setbeamercolor{enumerate item}{fg=vermell}
+\setbeamercolor{enumerate subitem}{fg=vermell}
+\setbeamercolor{enumerate subsubitem}{fg=vermell}
+\setbeamercolor{enumerate subsubsubitem}{fg=vermell}
+\setbeamercolor{alerted text}{fg=vermell}
+\setbeamerfont{alerted text}{series=\bfseries}
+% This command makes that acrobat reader doesn't changes the colors of the slide
+% when there are figures with transparencies.
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%      + Short title.               + Title which appears in the cover.
+%      v                            v
+\title[Template for slides]{Template for slides}
+%       + Short author names which appear in the slides.
+%       v
+\author[Dennis N\'u\~nez Fern\'andez]
+{   % Author names which appear in the cover page.
+    Dennis N\'u\~nez  Fern\'andez%\inst{1}
+}
+%          + Short affiliation which appears in the slides.
+%          v
+\institute[UNI]
+{   % Affiliation information which appears in the cover page.
+    \begin{tabular}{c}
+    %\inst{1}Facultad de Ingenier\'ia El\'ectrica y Electr\'onica
+    Universidad Nacional de Ingenier\'ia
+    \end{tabular}
+}
+%     + Short acronym of the conference or date of the presentation.
+%     v
+\date[August-2018]
+{   % Conference name which appears in the cover page.
+    Lima, Peru
+}
+
+
+\begin{document}
+% Creates the cover page.
+\frame{\titlepage}
+
+
+\begin{frame}\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+
+
+\section{I. INTRODUCTION} 
+
+
+
+\begin{frame}\frametitle{Title 1 of Introduction}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Title 2 of Introduction}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+
+
+
+\section{II. METHODOLOGY}
+ 
+
+ 
+\begin{frame}\frametitle{Title 1 of Methodology}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Title 2 of Methodology}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+
+
+\section{III. SYSTEM RESULTS} 
+
+
+
+\begin{frame}\frametitle{Title 1 of System Results}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Title 2}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{IV. CONCLUSIONS} 
+
+
+
+\begin{frame}\frametitle{Title 1 of Conclusions}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Title 2 of Conclusions}
+
+\begin{itemize}
+\item Here describe the project.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.4]{images/diagram.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Portrait Poster
+% LaTeX Template
+% Version 1.0 (15/5/13)
+%
+% Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a1paper,portrait,fontscale=0.410]{baposter}
+
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\definecolor{bordercol}{RGB}{40,40,40} % Border color of content boxes
+\definecolor{headercol1}{RGB}{186,215,230} % Background color for the header in the content boxes (left side)
+\definecolor{headercol2}{RGB}{80,80,80} % Background color for the header in the content boxes (right side)
+\definecolor{headerfontcol}{RGB}{0,0,0} % Text color for the header text in the content boxes
+\definecolor{boxcolor}{RGB}{186,215,230} % Background color for the content in the content boxes
+
+\begin{document}
+
+\background{ % Set the background to an image (background.pdf)
+\begin{tikzpicture}[remember picture,overlay]
+\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+{\includegraphics[height=1.1\textheight]{background}};
+\end{tikzpicture}
+}
+
+\begin{poster}{
+grid=false,
+columns=2,
+borderColor=bordercol, % Border color of content boxes
+headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
+headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+boxColorOne=boxcolor, % Background color for the content in the content boxes
+headershape=roundedright, % Specify the rounded corner in the content box headers
+headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+textborder=rectangle,
+background=user,
+headerborder=open, % Change to closed for a line under the content box headers
+boxshade=plain
+}
+{}
+%
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR NAME
+%----------------------------------------------------------------------------------------
+%
+{\sf\bf Template for Conference Poster \\ Template for Conference Poster} % Poster title
+{\vspace{0.2em} Dennis N\'u\~nez Fern\'andez $^1$, Author 2 $^2$ \\ % Author names
+{\smaller $^1$ National University of Engineering, Peru \\ $^2$ AGH University of Science and Technology, Poland}} % Author email addresses
+{\includegraphics[scale=0.4]{logo}} % University/lab logo
+
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\headerbox{Introduction}{name=introduction,column=0,row=0}{
+
+\textbf{\\Title 1:}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\textbf{\\Title 2:}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\textbf{\\Title 3:}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit [1].
+
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	OUR APPROACH
+%----------------------------------------------------------------------------------------
+
+\headerbox{Our Approach}{name=approach,column=0,below=introduction}{
+
+\textbf{\\Title 1}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{image-example.png}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	OVERVIEW OF THE METHOD
+%----------------------------------------------------------------------------------------
+
+\headerbox{Overview of the Method}{name=method,column=0,below=approach,above=bottom}{
+
+\textbf{\\Title 1:}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur $y=g(\mathbf{x},\mathbf{w})+\epsilon$.
+
+\textbf{\\Title 2:}
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{image-example.png}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+\textbf{\\Title 3:}
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit [2].
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+}
+
+ 
+
+%----------------------------------------------------------------------------------------
+%	DATASET
+%----------------------------------------------------------------------------------------
+
+\headerbox{Dataset}{name=dataset,column=1,row=0}{ % To reduce this block to 1 column width, remove 'span=2'
+
+\textbf{\\Title 1 [3]:} 
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{image-example.png}
+\captionof{figure}{Lorem ipsum dolor sit amet}
+\end{center}
+
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXPERIMENTAL RESULTS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Experimental Results}{name=results,column=1,below=dataset}{ % To reduce this block to 1 column width, remove 'span=2'
+
+
+\textbf{\\Title 1:}
+
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l l l l l}
+\toprule
+ & Accuracy & Precision & Recall & F1 score\\
+\midrule
+Experiment 1 & 0.99 & 0.99 & 0.99 & 0.99 \\
+Experiment 2 & 0.93 & 0.93 & 0.93 & 0.92 \\
+Experiment 3 & 0.97 & 0.96 & 0.97 & 0.97 \\
+Experiment 4 & 0.86 & 0.86 & 0.88 & 0.86 \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Lorem ipsum dolor sit amet.}
+\end{footnotesize}
+\end{center} 
+
+
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l l l l l}
+\toprule
+ & Accuracy & Precision & Recall & F1 score\\
+\midrule
+Experiment 1 & 0.99 & 0.99 & 0.99 & 0.99 \\
+Experiment 2 & 0.93 & 0.93 & 0.93 & 0.92 \\
+Experiment 3 & 0.97 & 0.96 & 0.97 & 0.97 \\
+Experiment 4 & 0.86 & 0.86 & 0.88 & 0.86 \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Lorem ipsum dolor sit amet.}
+\end{footnotesize}
+\end{center} 
+
+
+
+\textbf{\\Title 2:} 
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l l l l l}
+\toprule
+ & Accuracy & Precision & Recall & F1 score\\
+\midrule
+Experiment 1 & 0.99 & 0.99 & 0.99 & 0.99 \\
+Experiment 2 & 0.93 & 0.93 & 0.93 & 0.92 \\
+Experiment 3 & 0.97 & 0.96 & 0.97 & 0.97 \\
+Experiment 4 & 0.86 & 0.86 & 0.88 & 0.86 \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Lorem ipsum dolor sit amet.}
+\end{footnotesize}
+\end{center} 
+
+
+
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Conclusions}{name=conclusions,column=1,below=results}{ % To reduce this block to 1 column width, remove 'span=2'
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\headerbox{References}{name=references,column=1,below=conclusions,above=bottom}{ % To reduce this block to 1 column width, remove 'span=2'
+
+1. Reference 1.
+
+2. Reference 2.
+
+3. Reference 3.
+
+}
+
+
+\end{poster}
+
+\end{document}

@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Landscape Poster
+% LaTeX Template
+% Version 1.0 (11/06/13)
+%
+% baposter Class Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{amssymb} % Adds new symbols to be used in math mode
+
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{enumitem} % Used to reduce itemize/enumerate spacing
+\usepackage{palatino} % Use the Palatino font
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\usepackage{multicol} % Required for multiple columns
+\setlength{\columnsep}{1.5em} % Slightly increase the space between columns
+\setlength{\columnseprule}{0mm} % No horizontal rule between columns
+
+\usepackage{tikz} % Required for flow chart
+\usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart in the template
+
+\newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}
+
+\definecolor{lightblue}{rgb}{0.145,0.6666,1} % Defines the color used for content box headers
+
+\begin{document}
+
+\begin{poster}
+{
+headerborder=closed, % Adds a border around the header of content boxes
+colspacing=2em, % Column spacing
+bgColorOne=white, % Background color for the gradient on the left side of the poster
+bgColorTwo=white, % Background color for the gradient on the right side of the poster
+borderColor=lightblue, % Border color
+headerColorOne=black, % Background color for the header in the content boxes (left side)
+headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.2\textheight, % Height of the header
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+%
+{\includegraphics[height=6em]{icml_logo.png}} % First university/lab logo on the left
+{\bf\textsc{Template for conference poster}\vspace{0.4em}} % Poster title
+{\textsc{\{ Dennis Núñez Fernández$^1$, Author 2$^2$ and author 3$^1$ \} \hspace{12pt} \\ $^1$Cayetano Heredia University, $^1$University of Padua}} % Author names and institution
+{\includegraphics[height=6em]{logos_inst.png}} % Second university/lab logo on the right
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\headerbox{Introduction}{name=introduction,column=0,row=0}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.8\linewidth]{image-example.jpg}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROPOSAL
+%----------------------------------------------------------------------------------------
+
+\headerbox{Proposal}{name=proposal,column=0,row=0,below=introduction}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. 
+\end{itemize}
+
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%	METHODOLOGY
+%----------------------------------------------------------------------------------------
+
+\headerbox{Methodology}{name=methodology,span=2,column=1,row=0}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\end{itemize}
+
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{image-example.jpg}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+
+%------------------------------------------------
+
+\begin{multicols}{2}
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+\end{itemize}
+
+
+\end{multicols}
+
+%------------------------------------------------
+
+\begin{multicols}{2}
+
+\vspace{1em}
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{image-example.jpg}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{image-example.jpg}
+\captionof{figure}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+\end{multicols}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	RESULTS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Results}{name=results,column=3,row=0}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{l l l}
+\toprule
+\textbf{Approach} & \textbf{Accuracy} \\
+\midrule
+Method 1 & 67.2$\pm$ 0.6 \\
+Method 2 & 73.4$\pm$ 0.8 \\
+Method 3 & 79.7$\pm$ 1.4 \\
+\textbf{Our Method} & \textbf{84.3$\pm$ 1.2} \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Lorem ipsum dolor sit amet.}
+\end{center}
+
+}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\headerbox{Conclusion}{name=conclusion,column=3,row=0,below=results}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{itemize}
+
+}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Acknowledgements
+%----------------------------------------------------------------------------------------
+
+\headerbox{Acknowledgements}{name=acknowledgements,column=3,row=0,below=conclusion}{
+
+\vspace{1em}
+
+\begin{itemize}\compresslist
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{itemize}
+
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{poster}
+
+\end{document}

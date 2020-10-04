@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                           %
+%  Nombre: Plantilla maestra de documento (informe, memoria, trabajo, etc)  %
+%  Autor: Dennis Núñez                                                      %
+%  Fecha: 2015                                                              %
+%                                                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Clase report, es decir, documento largo con capítulos, y por las dos caras
+\documentclass[a4paper,12pt,twoside,openright]{report} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} %Localización: Español
+
+\usepackage{array} %Paquete útil para trabajar con tablas
+\usepackage{rotating} %Tablas giradas
+
+\usepackage{url} %Formateo e hiperenlaces
+%Para que los hipervínculos no aparezcan cajeados
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref} 
+
+\usepackage{amssymb} %Diversos símbolos
+\usepackage{eurosym} %Saca el símbolo del euro escribiendo \officialeuro{}
+\usepackage{verbatim} %Para meter código fuente
+\usepackage{fancyhdr}
+\usepackage{amsmath} %Paquete matemáticos
+\usepackage{graphicx} %Manejo de imágenes
+\usepackage{pdfpages} %Inclusión de pdfs a página completa, para incrustados usar figure
+\usepackage{float}
+
+%\usepackage{times} %Fuente alternativa a la Computer modern.
+\usepackage{wrapfig} %Paquete para girar imagenes
+
+\usepackage{caption3} 
+\DeclareCaptionOption{parskip}[]{} 
+\usepackage[small]{caption}  %Pies de foto en letra más pequeña
+
+
+\title{Report Template}
+\author{Dennis Núñez Fernández}
+\date{23 de Julio del 2015}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%  Fin del preámbulo  %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%Primeras consideraciones
+\renewcommand{\tablename}{Tabla} %Las tablas no se llaman cuadros
+\renewcommand{\listtablename}{Índice de tablas} 
+\renewcommand{\sin}{sen} %Los senos se llaman sen
+
+
+\maketitle %Genera la clásica página de título
+
+\addtolength{\parskip}{\baselineskip} %Líneas más separadas, después del título
+
+%Las presentaciones y disclaimers no llevan numeración
+\pagestyle{empty}
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+% Limpia el encabezado en las páginas impares vacías
+\makeatletter \def\cleardoublepage{
+\clearpage\if@twoside \ifodd\c@page\else%
+\hbox{}%
+\thispagestyle{empty}% Aquí elimina el estilo del encabezado
+\newpage%
+\if@twocolumn\hbox{}\newpage\fi\fi\fi} \makeatother
+
+
+%Numeración del índice en romanos
+\pagenumbering{roman}
+\setcounter{page}{1} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark} % En las páginas impares, parte izquierda del encabezado, aparecerá el nombre de capítulo
+\fancyhead[RE]{\rightmark} % En las páginas pares, parte derecha del encabezado, aparecerá el nombre de sección
+\fancyhead[RO,LE]{\thepage} % Números de página en las esquinas de los encabezados
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}} % Formato para el capítulo: N. Nombre
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}} % Formato para la sección: N.M. Nombre
+%Fin configuración de la numeración del índice
+
+
+\tableofcontents %Añade el índice general...
+
+%\addcontentsline{toc}{chapter}{Índice de tablas} %... el índice de tablas
+%\listoftables
+%
+%\addcontentsline{toc}{chapter}{Índice de figuras} %... y el de imágenes
+%\listoffigures
+
+
+\newpage
+
+
+%Numeración del cuerpo del documento en arábigos
+\pagenumbering{arabic}
+\setcounter{page}{0} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark} % En las páginas impares, parte izquierda del encabezado, aparecerá el nombre de capítulo
+\fancyhead[RE]{\rightmark} % En las páginas pares, parte derecha del encabezado, aparecerá el nombre de sección
+\fancyhead[RO,LE]{\thepage} % Números de página en las esquinas de los encabezados
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}} % Formato para el capítulo: N. Nombre
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}} % Formato para la sección: N.M. Nombre
+%Fin configuración de la numeración del cuerpo
+
+\newpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Ahora toca empezar a escribir, lo más difícil             % 
+%  Puedes hacerlo directamente aquí como ya hemos empezado,  %
+%  o puedes incluir archivos externos con el comando input,  %
+%  como en los anexos listados más abajo.                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Lorem Ipsum 1 \label{capitulouno}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas integer eget. Fermentum odio eu feugiat pretium nibh ipsum. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam. Rhoncus dolor purus non enim praesent. Enim sit amet venenatis urna cursus eget nunc scelerisque. Massa id neque aliquam vestibulum morbi blandit cursus. Turpis massa sed elementum tempus egestas sed. Auctor eu augue ut lectus arcu. Cursus eget nunc scelerisque viverra mauris. Amet est placerat in egestas erat imperdiet sed euismod. Faucibus et molestie ac feugiat sed lectus. Dignissim cras tincidunt lobortis feugiat vivamus. Ipsum a arcu cursus vitae congue mauris rhoncus. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Scelerisque felis imperdiet proin fermentum leo vel orci. Rhoncus dolor purus non enim praesent elementum facilisis leo. At tellus at urna condimentum mattis pellentesque.
+
+Purus viverra accumsan in nisl nisi. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Consequat interdum varius sit amet mattis vulputate. Aliquam sem et tortor consequat. Sit amet mauris commodo quis imperdiet. Sed sed risus pretium quam. Nullam non nisi est sit amet facilisis. Facilisis volutpat est velit egestas dui id. Purus semper eget duis at tellus at urna condimentum mattis. Posuere urna nec tincidunt praesent semper feugiat. Massa ultricies mi quis hendrerit dolor. Tellus elementum sagittis vitae et leo duis ut diam quam. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Facilisi nullam vehicula ipsum a.
+
+Ligula ullamcorper malesuada proin libero nunc. Sit amet consectetur adipiscing elit pellentesque. Vitae auctor eu augue ut. Mauris vitae ultricies leo integer malesuada nunc vel risus. Lobortis mattis aliquam faucibus purus in massa tempor. Dignissim suspendisse in est ante. Arcu bibendum at varius vel pharetra vel turpis. Maecenas ultricies mi eget mauris pharetra et. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Bibendum est ultricies integer quis auctor elit sed. Est sit amet facilisis magna. Dignissim cras tincidunt lobortis feugiat vivamus at augue. Ver Figura~\ref{image1}.
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.6]{figures/example_image.jpg}
+  \caption{Lorem Ipsum}
+  \label{image1}
+\end{figure}
+
+
+
+
+
+\chapter{Lorem Ipsum 2 \label{capitulodos}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. Imperdiet sed euismod nisi porta. Varius sit amet mattis vulputate enim. Eu tincidunt tortor aliquam nulla facilisi cras. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Libero id faucibus nisl tincidunt eget nullam non nisi est. Ut tellus elementum sagittis vitae et. Non curabitur gravida arcu ac tortor dignissim. Elit duis tristique sollicitudin nibh sit amet. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Nulla at volutpat diam ut venenatis tellus in metus. Nunc vel risus commodo viverra maecenas accumsan lacus vel.
+
+Accumsan tortor posuere ac ut. Cursus risus at ultrices mi tempus imperdiet nulla. Gravida neque convallis a cras semper. Et molestie ac feugiat sed lectus vestibulum mattis. Sed elementum tempus egestas sed sed. Netus et malesuada fames ac turpis. Sit amet consectetur adipiscing elit ut. Sed vulputate odio ut enim blandit volutpat maecenas. Amet tellus cras adipiscing enim eu turpis egestas. Massa sapien faucibus et molestie ac. Euismod lacinia at quis risus sed vulputate odio ut enim. Lorem sed risus ultricies tristique. Ut venenatis tellus in metus vulputate eu scelerisque felis. Ac odio tempor orci dapibus ultrices in iaculis. Sociis natoque penatibus et magnis dis parturient. Vitae auctor eu augue ut lectus arcu bibendum. Imperdiet sed euismod nisi porta lorem. Sodales neque sodales ut etiam sit amet nisl purus.
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \cite{libro1}, \cite{libro2}:
+
+
+\begin{itemize}
+\item Lorem Ipsum:
+
+ \begin{itemize}
+ \item Lorem Ipsum A
+ \item Lorem Ipsum B
+ \item Lorem Ipsum C:
+  \begin{itemize}
+  \item Lorem Ipsum AA
+  \item Lorem Ipsum BB
+  \item Lorem Ipsum CC
+  \end{itemize}
+ \item Lorem Ipsum D
+ \item Lorem Ipsum E
+ \item Lorem Ipsum F
+ \end{itemize}
+ 
+\item Lorem Ipsum:
+ \begin{itemize}
+ \item Lorem Ipsum A
+ \item Lorem Ipsum B
+ \item Lorem Ipsum C
+ \end{itemize}
+
+\end{itemize}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. Imperdiet sed euismod nisi porta. Varius sit amet mattis vulputate enim. Eu tincidunt tortor aliquam nulla facilisi cras. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Libero id faucibus nisl tincidunt eget nullam non nisi est. Ut tellus elementum sagittis vitae et. Non curabitur gravida arcu ac tortor dignissim. Ver Figura~\ref{image2}, Figura~\ref{image3}.
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.53]{figures/example_image.jpg}
+  \caption{Lorem Ipsum}
+  \label{image2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.53]{figures/example_image.jpg}
+  \caption{Lorem Ipsum}
+  \label{image3}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Apéndices, etiquetados para poder referenciarlos  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\chapter{Lorem Ipsum A \label{anexoi}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Proin fermentum leo vel orci porta non pulvinar neque. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Id diam vel quam elementum. Et malesuada fames ac turpis egestas. Morbi leo urna molestie at elementum eu facilisis sed odio. Imperdiet sed euismod nisi porta. Varius sit amet mattis vulputate enim. Eu tincidunt tortor aliquam nulla facilisi cras. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Libero id faucibus nisl tincidunt eget nullam non nisi est. Ut tellus elementum sagittis vitae et. Non curabitur gravida arcu ac tortor dignissim. Elit duis tristique sollicitudin nibh sit amet. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Nulla at volutpat diam ut venenatis tellus in metus. Nunc vel risus commodo viverra maecenas accumsan lacus vel.
+
+Accumsan tortor posuere ac ut. Cursus risus at ultrices mi tempus imperdiet nulla. Gravida neque convallis a cras semper. Et molestie ac feugiat sed lectus vestibulum mattis. Sed elementum tempus egestas sed sed. Netus et malesuada fames ac turpis. Sit amet consectetur adipiscing elit ut. Sed vulputate odio ut enim blandit volutpat maecenas. Amet tellus cras adipiscing enim eu turpis egestas. Massa sapien faucibus et molestie ac. Euismod lacinia at quis risus sed vulputate odio ut enim. Lorem sed risus ultricies tristique. Ut venenatis tellus in metus vulputate eu scelerisque felis. Ac odio tempor orci dapibus ultrices in iaculis. Sociis natoque penatibus et magnis dis parturient. Vitae auctor eu augue ut lectus arcu bibendum. Imperdiet sed euismod nisi porta lorem. Sodales neque sodales ut etiam sit amet nisl purus.
+
+Ligula ullamcorper malesuada proin libero nunc. Sit amet consectetur adipiscing elit pellentesque. Vitae auctor eu augue ut. Mauris vitae ultricies leo integer malesuada nunc vel risus. Lobortis mattis aliquam faucibus purus in massa tempor. Dignissim suspendisse in est ante. Arcu bibendum at varius vel pharetra vel turpis. Maecenas ultricies mi eget mauris pharetra et. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Bibendum est ultricies integer quis auctor elit sed. Est sit amet facilisis magna. Dignissim cras tincidunt lobortis feugiat vivamus at augue. Ver Figura~\ref{image4}.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.61]{figures/example_image.jpg}
+  \caption{Lorem Ipsum}
+  \label{image4}
+\end{figure}
+
+
+
+
+
+
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Se acabó el documento, ahora quedan  %
+%  unos pequeños detalles               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Añade la bibliografía al índice
+\addcontentsline{toc}{chapter}{Bibliografía}
+
+%Define el estilo de la bibliografía
+\bibliographystyle{unsrt} 
+
+%La siguiente línea hace referencia al archivo de la bibliografía. 
+%Aquí utilizamos el archivo de ejemplo `archivo.bib` 
+%que deberías haber descargado junto con esta plantilla.
+\bibliography{references} 
+%Recuerda que hay que compilar dos veces
+
+\end{document}
