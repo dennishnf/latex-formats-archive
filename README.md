@@ -40,7 +40,7 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded fo
 ### Formats for posters ###
 
 [Poster-1-horizontal](https://github.com/dennishnf/latex-formats-archive/blob/main/Poster-1-horizontal)  
-[Poster-2-vertical](https://github.com/dennishnf/latex-formats-archive/blob/main/Poster-1-vertical)  
+[Poster-2-vertical](https://github.com/dennishnf/latex-formats-archive/blob/main/Poster-2-vertical)  
 
 ### Formats for reports ###
 
