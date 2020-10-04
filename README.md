@@ -25,7 +25,7 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded fo
 
 ### Formats for conference papers ###
 
-[paper-BTSym-2019](https://github.com/dennishnf/latex-formats-archive/blob/main/Paper-BTSym-2019)  
+[Paper-BTSym-2019](https://github.com/dennishnf/latex-formats-archive/blob/main/Paper-BTSym-2019)  
 [Paper-CIARP-2017](https://github.com/dennishnf/latex-formats-archive/blob/main/Paper-CIARP-2017)  
 [Paper-ICML-2019](https://github.com/dennishnf/latex-formats-archive/blob/main/Paper-ICML-2019)  
 [Paper-ICML-2020](https://github.com/dennishnf/latex-formats-archive/blob/main/Paper-ICML-2020)  
