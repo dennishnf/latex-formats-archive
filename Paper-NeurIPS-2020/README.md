@@ -18,32 +18,40 @@ NeurIPS 2020 style guidelines:
 
 ## Modifications of the original format ##
 
-I modified the next in order to have a better visualization but using the format and instructions given by NerurIPS committee.
+I modified and have observations the next in order to have a better visualization but using the format and instructions given by NerurIPS committee.
 
-### Modification 1. ### 
+### Observation 1. ###
 
-Replace :
-
-```
-\usepackage[final]{neurips_2019}
-```
-
-with:
+As indicated in the .tex file, for ready submission uncomment the first one (this option hides the authors and the acknowledgements):
 
 ```
-\usepackage[nonatbib, final]{neurips_2019}
+% ready for submission
+ \usepackage{neurips_2020}
 
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2020}
 ```
 
-### Modification 2. ###
-
-Add the package:
+And for the final camera-ready version uncomment the second one (this option shows the full paper):
 
 ```
-\usepackage{cite}
+% ready for submission
+% \usepackage{neurips_2020}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+     \usepackage[final]{neurips_2020}
 ```
 
-### Modification 3. ###
+### Observation 2. ###
+
+Cite the papers using ```\cite{reference-name}```, example:
+
+```
+... we used the Caffe framework \cite{reference1}.
+```
+
+
+### Modification 1. ###
 
 In order to add multiple authors in a better visualization, I used:
 
@@ -60,15 +68,8 @@ In order to add multiple authors in a better visualization, I used:
 }
 ```
 
-### Modification 4. ###
 
-Cite the papers using ```\cite{reference-name}```, example:
-
-```
-... we used the Caffe framework \cite{reference1}.
-```
-
-### Modification 5. ###
+### Modification 2. ###
 
 I added the next packages in order to have a better manage of the images.
 
@@ -78,7 +79,7 @@ I added the next packages in order to have a better manage of the images.
 \usepackage{subfig}
 ```
 
-### Modification 6. ###
+### Modification 3. ###
 
 Replace all the References section (included the subtitle) with:
 
